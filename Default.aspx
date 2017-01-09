@@ -2,7 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-
     <h1 style="color:whitesmoke">Hello and Welcome to the Area Calculator!</h1>
 
         <br /><br />
@@ -13,6 +12,10 @@
 
     <div class="col-md-6 leftSide">
         <%-- Display for Rectangle Calculator --%>
+
+        <%-- Using UpdatePanel option to update an area of the webpage so the entire page doesn't refresh, rememeber to include AJAX ScriptManager! --%>
+        <asp:UpdatePanel ID="RectangleUpdate" runat="server">
+            <ContentTemplate>
          <asp:Label ID="LabelRectangle" runat="server" Text="Rectangle " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
         <img src="Content/Pictures/rectangle.jpg.gif" />
         <br />
@@ -24,7 +27,8 @@
             <asp:ListItem>Meter</asp:ListItem>
         </asp:DropDownList>
         <br />
-        <h5 style="color:whitesmoke">Height: </h5><asp:TextBox ID="RectangleHeight" runat="server"></asp:TextBox>
+        <h5 style="color:whitesmoke">Height: </h5>
+        <asp:TextBox ID="RectangleHeight" runat="server"></asp:TextBox>
         <asp:DropDownList ID="HeightList" runat="server">
             <asp:ListItem>Millimeter</asp:ListItem>
             <asp:ListItem>Centimeter</asp:ListItem>
@@ -35,8 +39,13 @@
         <br /><br />
         <asp:Label ID="RectangleReponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>
         <br /><br />
+                </ContentTemplate>
+            </asp:UpdatePanel>
 
         <%-- Display For Triangle Calculator --%>
+
+        <asp:UpdatePanel ID="TriangleUpdate" runat="server">
+            <ContentTemplate>
         <asp:Label ID="LabelTriangle" runat="server" Text="Triangle " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
         <img src="Content/Pictures/triangle.gif" height="70" width="80"/>
         <br />
@@ -59,10 +68,15 @@
         <br /><br />
         <asp:Label ID="TriangleResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>    
             <br /><br />
+                </ContentTemplate>
+            </asp:UpdatePanel>
     </div>
 
     <div class="col-md-6 rightSide">
         <%-- Display for Trapezoid --%>
+
+        <asp:UpdatePanel ID="TrapezoidUpdate" runat="server">
+            <ContentTemplate>
         <asp:Label ID="LabelTrapezoid" runat="server" Text="Trapezoid " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
         <img src="Content/Pictures/trapezoid.gif" />
         <br />
@@ -94,9 +108,13 @@
         <br /><br />
         <asp:Label ID="TrapezoidResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>
         <br /><br />
+                </ContentTemplate>
+            </asp:UpdatePanel>
 
         <%-- Display for circle! --%>
 
+        <asp:UpdatePanel ID="CircleUpdate" runat="server">
+            <ContentTemplate>
         <asp:Label ID="Label1" runat="server" Text="Circle " font-bold="true" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
         <img src="Content/Pictures/circle.gif" height="65" width="65"/>
         <br />
@@ -112,6 +130,8 @@
         <br /><br /><br />
         <asp:Label ID="CircleResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>        
         <br /><br />
+                </ContentTemplate>
+            </asp:UpdatePanel>
     </div>    
     
 </asp:Content>

@@ -9,7 +9,6 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
 
@@ -41,7 +40,7 @@ public partial class _Default : Page
         }
         catch (FormatException)
         {
-            RectangleReponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 25.55";
+            RectangleReponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85";
         }
     }
 
@@ -73,7 +72,7 @@ public partial class _Default : Page
         }
         catch (FormatException)
         {
-            TriangleResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 25.55";
+            TriangleResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85";
         }
     }
 
@@ -108,7 +107,7 @@ public partial class _Default : Page
         }
         catch (FormatException)
         {
-            TrapezoidResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 25.55!";
+            TrapezoidResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85!";
         }
     }
 
@@ -138,7 +137,7 @@ public partial class _Default : Page
         }
         catch (FormatException)
         {
-            CircleResponse.Text = "Error! Please Enter a Valid Value!E.g. 5, 25.55!";
+            CircleResponse.Text = "Error! Please Enter a Valid Value!E.g. 5, 26.85!";
         }
     }
 }

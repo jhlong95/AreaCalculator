@@ -26,6 +26,7 @@ textarea {
         margin-top: 20px;
     }
     .body-content {
-        padding: 0;
+        padding: 100px;
+        padding-top: inherit;
     }
 }

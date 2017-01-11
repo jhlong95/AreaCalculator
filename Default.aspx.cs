@@ -59,15 +59,15 @@ public partial class _Default : Page
             }
             else if (TriangleDropDownBase.SelectedValue == "Centimeter" && TriangleDropDownHeight.SelectedValue == "Centimeter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "cm\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "cm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Meter" && TriangleDropDownHeight.SelectedValue == "Meter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "m\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "m\xB2.";
             }
             else
             {
-                RectangleReponse.Text = "Please Choose the Same Unit of Measurement!";
+                TriangleResponse.Text = "Please Choose the Same Unit of Measurement!";
             }
         }
         catch (FormatException)

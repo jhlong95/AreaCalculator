@@ -14,6 +14,7 @@
         <%-- Display for Rectangle Calculator --%>
 
         <%-- Using UpdatePanel option to update an area of the webpage so the entire page doesn't refresh, rememeber to include AJAX ScriptManager! --%>
+
         <asp:UpdatePanel ID="RectangleUpdate" runat="server">
             <ContentTemplate>
          <asp:Label ID="LabelRectangle" runat="server" Text="Rectangle " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
@@ -73,6 +74,8 @@
     </div>
 
     <div class="col-md-6 rightSide">
+
+
         <%-- Display for Trapezoid --%>
 
         <asp:UpdatePanel ID="TrapezoidUpdate" runat="server">

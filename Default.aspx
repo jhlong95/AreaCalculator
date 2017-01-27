@@ -2,19 +2,20 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1 style="color:whitesmoke">Hello and Welcome to the Area Calculator!</h1>
+    <h1 style="color:whitesmoke; text-align:center">Hello and Welcome to the Area Calculator!</h1>
 
         <br /><br />
 
-        <h3 style="color:whitesmoke">Please Enter the Values and Click the Calculate Button:</h3>
+        <h3 style="color:whitesmoke; text-align:center">Please Enter the Values and Click the Calculate Button:</h3>
         
         <br /><br />
 
-    <div class="col-md-6 leftSide">
         <%-- Display for Rectangle Calculator --%>
 
         <%-- Using UpdatePanel option to update an area of the webpage so the entire page doesn't refresh, rememeber to include AJAX ScriptManager! --%>
 
+       <div class="row">
+           <div class="col-sm-6">
         <asp:UpdatePanel ID="RectangleUpdate" runat="server">
             <ContentTemplate>
          <asp:Label ID="LabelRectangle" runat="server" Text="Rectangle " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
@@ -36,12 +37,12 @@
             <asp:ListItem>Meter</asp:ListItem>
         </asp:DropDownList>
         <br /><br />
-        <asp:Button ID="RectangleButton" runat="server" Text="Calculate" OnClick="RectangleButton_Click" CssClass="btn-success"/>
-        <br /><br />
-        <asp:Label ID="RectangleReponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>
-        <br /><br />
+                <div class="rectangleButton">
+        <asp:Button ID="RectangleButton" runat="server" Text="Calculate" OnClick="RectangleButton_Click" CssClass="btn-success"/>           
+                    <asp:Label ID="RectangleReponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>
+                </div>
                 </ContentTemplate>
-            </asp:UpdatePanel>
+            </asp:UpdatePanel>    
 
         <%-- Display For Triangle Calculator --%>
 
@@ -65,19 +66,18 @@
             <asp:ListItem>Meter</asp:ListItem>
         </asp:DropDownList>
         <br /><br />
-        <asp:Button ID="TriangleButton" runat="server" Text="Calculate" OnClick="TriangleButton_Click" CssClass="btn-success" />
-        <br /><br />
-        <asp:Label ID="TriangleResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>    
-            <br /><br />
-                </ContentTemplate>
-            </asp:UpdatePanel>
-    </div>
 
-    <div class="col-md-6 rightSide">
+                <div class="triangleButton">
+        <asp:Button ID="TriangleButton" runat="server" Text="Calculate" OnClick="TriangleButton_Click" CssClass="btn-success" />
+        <asp:Label ID="TriangleResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>    
+                </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>    
+           </div>         
 
 
         <%-- Display for Trapezoid --%>
-
+           <div class="col-sm-6">
         <asp:UpdatePanel ID="TrapezoidUpdate" runat="server">
             <ContentTemplate>
         <asp:Label ID="LabelTrapezoid" runat="server" Text="Trapezoid " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
@@ -106,16 +106,17 @@
             <asp:ListItem>Centimer</asp:ListItem>
             <asp:ListItem>Meter</asp:ListItem>
         </asp:DropDownList>
-        <br /><br />
+                <br /><br />
+
+                <div class="trapButton">
         <asp:Button ID="TrapezoidButton" runat="server" Text="Calculate" OnClick="TrapezoidButton_Click" CssClass="btn-success"/>
-        <br /><br />
-        <asp:Label ID="TrapezoidResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>
-        <br /><br />
-                </ContentTemplate>
-            </asp:UpdatePanel>
+        <asp:Label ID="TrapezoidResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>    
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>    
+
 
         <%-- Display for circle! --%>
-
         <asp:UpdatePanel ID="CircleUpdate" runat="server">
             <ContentTemplate>
         <asp:Label ID="Label1" runat="server" Text="Circle " font-bold="true" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
@@ -128,13 +129,13 @@
             <asp:ListItem>Centimeter</asp:ListItem>
             <asp:ListItem>Meter</asp:ListItem>
         </asp:DropDownList>
-        <br /><br />
+
+                <div class="circleButton">
         <asp:Button ID="CircleButton" runat="server" Text="Calculate" OnClick="CircleButton_Click" CssClass="btn-success"/>
-        <br /><br /><br />
         <asp:Label ID="CircleResponse" runat="server" ForeColor="WhiteSmoke" Font-Bold="true"></asp:Label>        
-        <br /><br />
+                </div>
                 </ContentTemplate>
-            </asp:UpdatePanel>
-    </div>    
-    
+            </asp:UpdatePanel>        
+           </div>
+    </div>
 </asp:Content>

@@ -18,20 +18,21 @@ public partial class _Default : Page
         {
             string length = RectangleLength.Text;
             string height = RectangleHeight.Text;
-            double lengthAsDouble = Convert.ToDouble(length);
-            double heightAsDouble = Convert.ToDouble(height);
+            decimal lengthAsDecimal = Convert.ToDecimal(length);
+            decimal heightAsDecimal = Convert.ToDecimal(height);
+            decimal recResult = lengthAsDecimal * heightAsDecimal;
 
             if (LengthList.SelectedValue == "Millimeter" && HeightList.SelectedValue == "Millimeter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + lengthAsDouble * heightAsDouble + "mm\xB2.";
+                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString("#.000") + "mm\xB2.";
             }
             else if (LengthList.SelectedValue == "Centimeter" && HeightList.SelectedValue == "Centimeter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + lengthAsDouble * heightAsDouble + "cm\xB2.";
+                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString("#.000") + "cm\xB2.";
             }
             else if (LengthList.SelectedValue == "Meter" && HeightList.SelectedValue == "Meter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + lengthAsDouble * heightAsDouble + "m\xB2.";
+                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString("#.000") + "m\xB2.";
             }
             else
             {
@@ -50,20 +51,21 @@ public partial class _Default : Page
         {
             string _base = TriangleBase.Text;
             string _height = TriangleHeight.Text;
-            double _baseAsDouble = Convert.ToDouble(_base);
-            double _heightAsDouble = Convert.ToDouble(_height);
+            decimal _baseAsDecimal = Convert.ToDecimal(_base);
+            decimal _heightAsDecimal = Convert.ToDecimal(_height);
+            decimal triResult = _baseAsDecimal * _heightAsDecimal /2;
 
             if (TriangleDropDownBase.SelectedValue == "Millimeter" && TriangleDropDownHeight.SelectedValue == "Millimeter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "mm\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString("#.000") + "mm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Centimeter" && TriangleDropDownHeight.SelectedValue == "Centimeter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "cm\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString("#.000") + "cm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Meter" && TriangleDropDownHeight.SelectedValue == "Meter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + (_baseAsDouble * _heightAsDouble) / 2 + "m\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString("#.000") + "m\xB2.";
             }
             else
             {
@@ -83,21 +85,22 @@ public partial class _Default : Page
             string trapWidth1 = TrapTopLength.Text;
             string trapwidth2 = TrapBottomLength.Text;
             string trapHeight = TrapHeight.Text;
-            double width1AsDouble = Convert.ToDouble(trapWidth1);
-            double width2AsDouble = Convert.ToDouble(trapwidth2);
-            double trapHeightAsDouble = Convert.ToDouble(trapHeight);
+            decimal width1AsDecimal = Convert.ToDecimal(trapWidth1);
+            decimal width2AsDecimal = Convert.ToDecimal(trapwidth2);
+            decimal trapHeightAsDecimal = Convert.ToDecimal(trapHeight);
+            decimal trapResult = ((width1AsDecimal + width2AsDecimal) / 2) * trapHeightAsDecimal;
 
             if (TrapezoidTopWidth.Text == "Millimeter" && TrapezoidBottomWidth.Text == "Millimeter" && TrapezoidHeight.Text == "Millimeter")
             {
-                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + ((width1AsDouble + width2AsDouble) / 2) * trapHeightAsDouble + "mm\xB2";
+                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString("#.000") + "mm\xB2";
             }
             else if (TrapezoidTopWidth.Text == "Centimeter" && TrapezoidBottomWidth.Text == "Centimeter" && TrapezoidHeight.Text == "Centimeter")
             {
-                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + ((width1AsDouble + width2AsDouble) / 2) * trapHeightAsDouble + "cm\xB2";
+                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString("#.000") + "cm\xB2";
             }
             else if (TrapezoidTopWidth.Text == "Meter" && TrapezoidBottomWidth.Text == "Meter" && TrapezoidHeight.Text == "Meter")
             {
-                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + ((width1AsDouble + width2AsDouble) / 2) * trapHeightAsDouble + "m\xB2";
+                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString("#.000") + "m\xB2";
             }
             else
             {
@@ -117,18 +120,19 @@ public partial class _Default : Page
         {
             string radius = CircleRadius.Text;
             double radiusAsDouble = Convert.ToDouble(radius);
+            double circResult = Math.PI * (radiusAsDouble * radiusAsDouble);
 
             if (RadiusDropDown.SelectedValue == "Millimeter")
             {
-                CircleResponse.Text = "The Area of Your Circle is: " + Math.PI * (radiusAsDouble * radiusAsDouble) + "mm\xB2";
+                CircleResponse.Text = "The Area of Your Circle is: " + circResult.ToString("#.00000") + "mm\xB2";
             }
             else if (RadiusDropDown.SelectedValue == "Centimeter")
             {
-                CircleResponse.Text = "The Area of Your Circle is: " + Math.PI * (radiusAsDouble * radiusAsDouble) + "cm\xB2";
+                CircleResponse.Text = "The Area of Your Circle is: " + circResult.ToString("#.00000") + "cm\xB2";
             }
             else if (RadiusDropDown.SelectedValue == "Meter")
             {
-                CircleResponse.Text = "The Area of Your Circle is: " + Math.PI * (radiusAsDouble * radiusAsDouble) + "m\xB2";
+                CircleResponse.Text = "The Area of Your Circle is: " + circResult.ToString("#.00000") + "m\xB2";
             }
             else
             {

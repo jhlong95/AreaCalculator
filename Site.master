@@ -55,7 +55,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p style="color: whitesmoke">&copy; <%: DateTime.Now.Year %> - Area Calculator by James Long</p>
+                <p style="color: whitesmoke">&copy; <%: DateTime.Now.Year %> - Area Calculator by <u><a href="http://j-h-long.uk/" target="_blank" style="color:whitesmoke;">James Long</a></u></p>
             </footer>
         </div>
     </form>

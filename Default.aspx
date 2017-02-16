@@ -19,7 +19,7 @@
         <asp:UpdatePanel ID="RectangleUpdate" runat="server">
             <ContentTemplate>
          <asp:Label ID="LabelRectangle" runat="server" Text="Rectangle " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
-        <img src="Content/Pictures/rectangle.jpg.gif" />
+        <img src="Content/Pictures/rectangle.png" height="75" width="100"/>
         <br />
         <h5 style="color:whitesmoke">Length: </h5>
         <asp:TextBox ID="RectangleLength" runat="server"></asp:TextBox>
@@ -49,7 +49,7 @@
         <asp:UpdatePanel ID="TriangleUpdate" runat="server">
             <ContentTemplate>
         <asp:Label ID="LabelTriangle" runat="server" Text="Triangle " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
-        <img src="Content/Pictures/triangle.gif" height="70" width="80"/>
+        <img src="Content/Pictures/triangle.png" height="80" width="120"/>
         <br />
         <h5 style="color:whitesmoke">Base: </h5>
         <asp:TextBox ID="TriangleBase" runat="server"></asp:TextBox>
@@ -81,7 +81,7 @@
         <asp:UpdatePanel ID="TrapezoidUpdate" runat="server">
             <ContentTemplate>
         <asp:Label ID="LabelTrapezoid" runat="server" Text="Trapezoid " Font-Bold="True" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
-        <img src="Content/Pictures/trapezoid.gif" />
+        <img src="Content/Pictures/trapezoid.png" height="80" width="80" style="border-color:white;"/>
         <br />
         <h5 style="color:whitesmoke">Top Width: </h5>
         <asp:TextBox ID="TrapTopLength" runat="server"></asp:TextBox>
@@ -120,7 +120,7 @@
         <asp:UpdatePanel ID="CircleUpdate" runat="server">
             <ContentTemplate>
         <asp:Label ID="Label1" runat="server" Text="Circle " font-bold="true" Font-Size="Medium" ForeColor="WhiteSmoke"></asp:Label>
-        <img src="Content/Pictures/circle.gif" height="65" width="65"/>
+        <img src="Content/Pictures/circle.png" height="70" width="70"/>
         <br />
         <h5 style="color:whitesmoke">Radius: </h5>
         <asp:TextBox ID="CircleRadius" runat="server"></asp:TextBox>

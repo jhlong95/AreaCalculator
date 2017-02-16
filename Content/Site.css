@@ -4,6 +4,7 @@ body {
     background-size: cover;
     align-content:center;
     vertical-align:central;
+    padding-top: 30px;
 }
 
 /* Wrapping element */

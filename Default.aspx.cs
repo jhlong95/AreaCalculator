@@ -24,15 +24,15 @@ public partial class _Default : Page
 
             if (LengthList.SelectedValue == "Millimeter" && HeightList.SelectedValue == "Millimeter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString("#.000") + "mm\xB2.";
+                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString() + "mm\xB2.";
             }
             else if (LengthList.SelectedValue == "Centimeter" && HeightList.SelectedValue == "Centimeter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString("#.000") + "cm\xB2.";
+                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString() + "cm\xB2.";
             }
             else if (LengthList.SelectedValue == "Meter" && HeightList.SelectedValue == "Meter")
             {
-                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString("#.000") + "m\xB2.";
+                RectangleReponse.Text = "The Area of Your Rectangle is: " + recResult.ToString() + "m\xB2.";
             }
             else
             {
@@ -57,15 +57,15 @@ public partial class _Default : Page
 
             if (TriangleDropDownBase.SelectedValue == "Millimeter" && TriangleDropDownHeight.SelectedValue == "Millimeter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString("#.000") + "mm\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString() + "mm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Centimeter" && TriangleDropDownHeight.SelectedValue == "Centimeter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString("#.000") + "cm\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString() + "cm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Meter" && TriangleDropDownHeight.SelectedValue == "Meter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString("#.000") + "m\xB2.";
+                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString() + "m\xB2.";
             }
             else
             {
@@ -92,15 +92,15 @@ public partial class _Default : Page
 
             if (TrapezoidTopWidth.Text == "Millimeter" && TrapezoidBottomWidth.Text == "Millimeter" && TrapezoidHeight.Text == "Millimeter")
             {
-                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString("#.000") + "mm\xB2";
+                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString() + "mm\xB2";
             }
             else if (TrapezoidTopWidth.Text == "Centimeter" && TrapezoidBottomWidth.Text == "Centimeter" && TrapezoidHeight.Text == "Centimeter")
             {
-                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString("#.000") + "cm\xB2";
+                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString() + "cm\xB2";
             }
             else if (TrapezoidTopWidth.Text == "Meter" && TrapezoidBottomWidth.Text == "Meter" && TrapezoidHeight.Text == "Meter")
             {
-                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString("#.000") + "m\xB2";
+                TrapezoidResponse.Text = "The Area of Your Trapezoid is: " + trapResult.ToString() + "m\xB2";
             }
             else
             {

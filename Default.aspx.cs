@@ -43,6 +43,23 @@ public partial class _Default : Page
         {
             RectangleReponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85";
         }
+
+        try
+        {
+            string length = RectangleLength.Text;
+            string height = RectangleHeight.Text;
+            decimal lengthAsDecimal = Convert.ToDecimal(length);
+            decimal heightAsDecimal = Convert.ToDecimal(height);
+
+            if(lengthAsDecimal <= 0 || heightAsDecimal <= 0)
+            {
+                RectangleReponse.Text = "Please Enter a Value That's Greater Than 0!";
+            }
+        }
+        catch (FormatException)
+        {
+            RectangleReponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26,85";
+        }
     }
 
     protected void TriangleButton_Click(object sender, EventArgs e)
@@ -57,15 +74,15 @@ public partial class _Default : Page
 
             if (TriangleDropDownBase.SelectedValue == "Millimeter" && TriangleDropDownHeight.SelectedValue == "Millimeter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString() + "mm\xB2.";
+                TriangleResponse.Text = "The Area of Your Triangle is: " + triResult.ToString() + "mm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Centimeter" && TriangleDropDownHeight.SelectedValue == "Centimeter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString() + "cm\xB2.";
+                TriangleResponse.Text = "The Area of Your Triangle is: " + triResult.ToString() + "cm\xB2.";
             }
             else if (TriangleDropDownBase.SelectedValue == "Meter" && TriangleDropDownHeight.SelectedValue == "Meter")
             {
-                TriangleResponse.Text = "The Area of Your Rectangle is: " + triResult.ToString() + "m\xB2.";
+                TriangleResponse.Text = "The Area of Your Triangle is: " + triResult.ToString() + "m\xB2.";
             }
             else
             {
@@ -75,6 +92,23 @@ public partial class _Default : Page
         catch (FormatException)
         {
             TriangleResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85";
+        }
+
+        try
+        {
+            string _base = TriangleBase.Text;
+            string _height = TriangleHeight.Text;
+            decimal _baseAsDecimal = Convert.ToDecimal(_base);
+            decimal _heightAsDecimal = Convert.ToDecimal(_height);
+
+            if(_baseAsDecimal <= 0 || _heightAsDecimal <= 0)
+            {
+                TriangleResponse.Text = "Please Enter a Value That's Greater Than 0!";
+            }
+        }
+        catch (FormatException)
+        {
+            TriangleResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26,85";
         }
     }
 
@@ -112,6 +146,25 @@ public partial class _Default : Page
         {
             TrapezoidResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85!";
         }
+
+        try
+        {
+            string trapWidth1 = TrapTopLength.Text;
+            string trapwidth2 = TrapBottomLength.Text;
+            string trapHeight = TrapHeight.Text;
+            decimal width1AsDecimal = Convert.ToDecimal(trapWidth1);
+            decimal width2AsDecimal = Convert.ToDecimal(trapwidth2);
+            decimal trapHeightAsDecimal = Convert.ToDecimal(trapHeight);
+
+            if(width1AsDecimal <= 0 || width2AsDecimal <0 || trapHeightAsDecimal <= 0)
+            {
+                TrapezoidResponse.Text = "Please Enter a Value That's Greater Than 0!";
+            }
+        }
+        catch
+        {
+            TrapezoidResponse.Text = "Error! Please Enter a Valid Value! E.g. 5, 26.85!";
+        }
     }
 
     protected void CircleButton_Click(object sender, EventArgs e)
@@ -140,6 +193,21 @@ public partial class _Default : Page
             }
         }
         catch (FormatException)
+        {
+            CircleResponse.Text = "Error! Please Enter a Valid Value!E.g. 5, 26.85!";
+        }
+
+        try
+        {
+            string radius = CircleRadius.Text;
+            double radiusAsDouble = Convert.ToDouble(radius);
+
+            if(radiusAsDouble <= 0)
+            {
+                CircleResponse.Text = "Please Enter a Value That's Greater Than 0!";
+            }
+        }
+        catch
         {
             CircleResponse.Text = "Error! Please Enter a Valid Value!E.g. 5, 26.85!";
         }

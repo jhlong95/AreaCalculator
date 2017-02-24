@@ -103,7 +103,7 @@
         <asp:TextBox ID="TrapHeight" runat="server"></asp:TextBox>
         <asp:DropDownList ID="TrapezoidHeight" runat="server">
             <asp:ListItem>Millimeter</asp:ListItem>
-            <asp:ListItem>Centimer</asp:ListItem>
+            <asp:ListItem>Centimeter</asp:ListItem>
             <asp:ListItem>Meter</asp:ListItem>
         </asp:DropDownList>
                 <br /><br />
